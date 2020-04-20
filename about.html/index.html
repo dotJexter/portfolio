@@ -4,15 +4,16 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+      <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
   </head>
 
-  <body>
+  <body class="dark">
     <div class="container">
       <div class="nav-wrapper">
         <div class="left-side">
-          <div class="nav-link-wrapper">
+          <div class="nav-link-wrapper active-nav-link">
             <a href="index.html">Home</a>
           </div>
 
@@ -194,5 +195,19 @@
       </div>
 
 </body>
+
+<script type="text/javascript">
+  constportfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    constportfolioItems.forEach(portfolioItem => {
+      portfolioItem.addEventListener('mouseover', () => {
+        portfolioItem.childNodes[1].classList.add('img-darken');
+    })
+
+       portfolioItem.addEventListener('mouseout', () => {
+        portfolioItem.childNodes[1].classList.remove('img-darken');
+    })
+  })
+</script>
 
 </html>
